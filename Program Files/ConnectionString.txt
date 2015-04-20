@@ -1,0 +1,1 @@
+Data Source=(local);Initial Catalog=ServerCloak;User ID=sa;Password=*******;Connect Timeout=120;

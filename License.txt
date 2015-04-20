@@ -1,0 +1,19 @@
+ServerCloak License
+
+BY USING THIS ServerCloak Software, YOU AGREE TO BE BOUND BY THE TERMS OF THIS LICENSE.
+
+1. THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL ANY COPYRIGHT HOLDER/AUTHOR/DEVELOPER BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL,SPECIAL,INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE SOFTWARE INCLUDING BUT NOT LIMITED TO LOSS OF DATA, FAILURE OF THE SOFTWARE TO OPERATE WITH ANY OTHER PROGRAMS OR SOFTWARE, EVEN IF COPYRIGHT HOLDER/AUTHOR/DEVELOPER HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+2. YOU MAY NOT COPY, SUB-LICENSE, REVERSE ENGINEER, DECOMPILE, DISASSEMBLE, OR MODIFY THIS SOFTWARE IN ANY WAY.
+
+3. YOU MAY NOT DISTRIBUTE THE SOFTWARE ON ANY MEDIUM WITHOUT PRIOR NOTICE FROM VIKASRANA.COM OF THIS SOFTWARE. YOU HAVE TO ASK FOR PERMISSION IN ORDER TO MAKE THIS SOFTWARE AVAILABLE FOR DISTRIBUTION OVER THE INTERNET OR ANY OTHER DISTRIBUTABLE MEDIUM.
+
+By possessing and/or using this software you are automatically agreeing to and show that you have read and understood the terms and conditions contained within this Freeware Software License Agreement. This Freeware Software License Agreement is then effective while you possess, use and continue to make use of these software products. If you do not agree with our Freeware Software License Agreement you must not possess or use our software products - this Freeware Software License Agreement will then not apply to you. This Freeware Software License Agreement is subject to change without notice.
+
+Violators of this agreement will be prosecuted to the full extent of the law.
+
+This software is free, however if you do enjoy it, please consider a small donation to the developer for his time and efforts to make this software possible.
+https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=G9XKETWEVAFHQ
+
+
+If you have any questions regarding this license, please contact i@vikasrana.com
