@@ -98,31 +98,3 @@
   This software uses Sql Server as back-end to save logs and enable developers to generate detailed reports.
   </li>
 </ol>
-<p>
-</p>
-<p>
-  <b>
-  Support my time and effort to make this software possible:
-  </b>
-</p>
-<p>
-  1. I'm always open for <a href="http://www.vikasrana.com/Contact">
-  freelance work.
-  </a>
-</p>
-<p>
-  2. Like my work? Why not buy me a coffee for my time and effort on<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=G9XKETWEVAFHQ" class="fa" target="_blank">
-  <img src="http://www.vikasrana.com/Hub/images/paypal.jpg" style="width:80px; border:solid 1px silver; border-radius:5px; margin:0 0 5px 5px;" alt="paypal">
-  </a>
-</p>
-<p>
-</p>
-<p style="text-align:center;">
-  <a class="btn btn-cta-secondary" href="http://www.vikasrana.com/Download/ServerCloak.zip" target="_blank">
-  <i class="fa fa-download">
-  </i>
-  Download ServerCloak
-  </a>
-</p>
-<p>
-</p>
