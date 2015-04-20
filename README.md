@@ -38,7 +38,7 @@
   File Maker
   </li>
   <li>
-  Windows Security
+  Windows Authentication <small>(Other than Rdp)</small>
   </li>
   <li>
   Routing and Remote Access
