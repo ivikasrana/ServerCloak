@@ -38,9 +38,7 @@
   File Maker
   </li>
   <li>
-  SSH <small>
-  (Windows Security)
-  </small>
+  Windows Security
   </li>
   <li>
   Routing and Remote Access
