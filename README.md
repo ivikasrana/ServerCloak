@@ -1,7 +1,7 @@
 #ServerCloak
 
 ServerCloak is a light weight Intrusion detection and defense system works with windows firewall to protect any windows operating system from attacks that are intended to hack the server or provide any operational damage.
-  By keeping eye on event logs in windows event viewer and system's network activities ServerCloak capture and log any failed/denied inbound calls from IPv4 as well as IPv6.
+  By keeping eye on network activities and event viewer logs, ServerCloak capture and log any failed/denied inbound calls from IPv4 as well as IPv6.
   Once the calls reaches its limit, the service immediately tells windows firewall to block the attacking IP by adding a denial inbound firewall rule.
 <p>
   <a href="http://www.vikasrana.com/Download/ServerCloak.zip" target="_blank">
