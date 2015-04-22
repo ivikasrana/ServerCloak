@@ -93,3 +93,32 @@ ServerCloak is a light weight Intrusion detection and defense system works with 
   This software uses Sql Server as back-end to save logs and enable developers to generate detailed reports.
   </li>
 </ol>
+<p>
+<b>Setup Notes</b>
+<ol>
+<li>
+This is a 64 bit release, please contact me for 32bit or ia64 releases on my email: i@iviaksrana.com
+</li>
+<li>
+This is not a setup, before using this utility please place all files in a ProgramFiles or any other folder of your choice.
+</li>
+<li>
+This utility uses Linq queries, so please install and configure database on Sql Server 2005 or higher.
+</li>
+<li>
+Database scripts are present in the DatabaseScripts.sql files.
+</li>
+<li>
+Update ConnectionString in ConnectionString.txt file
+</li>
+<li>
+Run ServerCloak.exe as Administrator, Enjoy
+</li>
+<li>
+To stop attacks and block the attackers plesae make sure your windows firewall is working.
+</li>
+<li>
+ServerCloak will keep your firewall enable all the time.
+</li>
+</ol>
+</p>
