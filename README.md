@@ -1,3 +1,12 @@
+<p>
+  ServerCloak 2 released on my website:
+  <a href="http://www.vikasrana.com/Download/ServerCloak.zip" target="_blank">
+  Download ServerCloak2
+</a>
+</p>
+
+OR
+
 #ServerCloak
 
 ServerCloak is a light weight Intrusion detection and defense system works with windows firewall to protect any windows operating system from attacks that are intended to hack the server or provide any operational damage.
