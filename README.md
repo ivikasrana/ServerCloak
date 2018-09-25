@@ -1,13 +1,18 @@
 <p>
   ServerCloak 2 released on my website:
+  <br/>
+  <a href="https://www.vikasrana.com/Experiment/223/Server-Cloak-Intrusion-Prevention-System" target="_blank">
+  View Details
+  </a>
+  <br/>
   <a href="http://www.vikasrana.com/Download/ServerCloak.zip" target="_blank">
-  Download ServerCloak2
-</a>
+  Download ServerCloak2!
+  </a>
 </p>
 
 OR
 
-#ServerCloak
+#ServerCloak 1
 
 ServerCloak is a light weight Intrusion detection and defense system works with windows firewall to protect any windows operating system from attacks that are intended to hack the server or provide any operational damage.
   By keeping eye on network activities and event viewer logs, ServerCloak capture and log any failed/denied inbound calls from IPv4 as well as IPv6.
