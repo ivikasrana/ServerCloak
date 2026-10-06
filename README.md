@@ -1,121 +1,80 @@
+# ServerCloak
 
-#ServerCloak 1
+A lightweight intrusion detection and defense system for Windows. ServerCloak watches network activity and
+event logs for failed or denied inbound calls (IPv4 and IPv6), and when an attacker reaches the limit it adds a
+deny rule to Windows Firewall for that IP.
 
-ServerCloak is a light weight Intrusion detection and defense system works with windows firewall to protect any windows operating system from attacks that are intended to hack the server or provide any operational damage.
-  By keeping eye on network activities and event viewer logs, ServerCloak capture and log any failed/denied inbound calls from IPv4 as well as IPv6.
-  Once the calls reaches its limit, the service immediately tells windows firewall to block the attacking IP by adding a denial inbound firewall rule.
-</p>
-<p>
-  <b>
-  Features
-  </b>
-  <br>
-  ServerCloak verifies and keep windows firewall enabled all the times. With having intrusion detections enabled and firewall defense system for windows ServerCloak protects the following windows features<br>
-</p>
+[![License: Dual](https://img.shields.io/badge/license-MIT%20%2B%20Commercial-blue.svg)](LICENSE)
 
-<ol>
-  <li>
-  Mail Server
-  </li>
-  <li>
-  Microsoft Sql Server
-  </li>
-  <li>
-  File Transfer Protocol
-  </li>
-  <li>
-  Remote Desktop Protocol <small>
-  TLS/SSL must be enabled to make the detection possible
-  </small>
-  </li>
-  <li>
-  File Maker
-  </li>
-  <li>
-  Windows Authentication <small>(Other than Rdp)</small>
-  </li>
-  <li>
-  Routing and Remote Access
-  </li>
-  <li>
-  Windows Firewall <small>
-  if firewall got disabled, ServerCloak re-enables it within minutes
-  </small>
-  </li>
-</ol>
-<p>
-</p>
-<p>
-  <b>
-  Supported Operating Systems
-  </b>
-</p>
+## What it protects
 
-<ol>
-  <li>
-  Windows 7 or later. <small>
-  Developed and tested on Windows 8.1
- </small>
-  </li>
-  <li>
-  Windows server 2008 or later. <small>
-  Tested and deployed on Windows Server 2008 R2 &amp; Windows Server 2012 R2 based production servers
-  </small>
-  </li>
-</ol>
-<p>
-</p>
-<p>
-  <b>
-  System Requirements
-  </b>
-</p>
+| Service | Detection |
+|---|---|
+| Mail server (SMTP) | Packet sniffer |
+| Microsoft SQL Server | Failed-login monitoring |
+| FTP | Packet sniffer |
+| Remote Desktop (RDP) | Packet sniffer. TLS/SSL must be enabled for detection to work. |
+| FileMaker | Failed-login monitoring |
+| Windows Authentication (other than RDP) | Windows security events, Kerberos, Active Directory |
+| Routing and Remote Access | RRAS security events |
+| Windows Firewall | Re-enabled within minutes if someone turns it off |
 
-<ol>
-  <li>
-  Microsoft .Net Framework 4.5, Latest version available <a href="http://www.microsoft.com/Net" target="_blank">
-  here
-  </a>
-  </li>
-  <li>
-  1Ghz higher multi-core CPU, Intel Dual Core or better
-  </li>
-  <li>
-  1GB RAM
-  </li>
-  <li>
-  Windows firewall must be installed, If not enabled ServerCloak will try to enable windows firewall automatically.
-  </li>
-  <li>
-  This software uses Sql Server as back-end to save logs and enable developers to generate detailed reports.
-  </li>
-</ol>
-<p>
-<b>Setup Notes</b>
-<ol>
-<li>
-This is a 64 bit release, please contact me for 32bit or ia64 releases on my email: i@iviaksrana.com
-</li>
-<li>
-This is not a setup, before using this utility please place all files in a ProgramFiles or any other folder of your choice.
-</li>
-<li>
-This utility uses Linq queries, so please install and configure database on Sql Server 2005 or higher.
-</li>
-<li>
-Database scripts are present in the DatabaseScripts.sql files.
-</li>
-<li>
-Update ConnectionString in ConnectionString.txt file
-</li>
-<li>
-Run ServerCloak.exe as Administrator, Enjoy
-</li>
-<li>
-To stop attacks and block the attackers plesae make sure your windows firewall is working.
-</li>
-<li>
-ServerCloak will keep your firewall enable all the time.
-</li>
-</ol>
-</p>
+IP addresses are mapped to countries (IPv4 and IPv6 lists), so you can review and block attackers by country.
+
+## Solution layout
+
+| Project | Purpose |
+|---|---|
+| `ServerCloakService` | Windows service. Runs the cloaks (SMTP, SQL, FTP, RDP, FileMaker, Windows security, RRAS) and manages firewall rules. |
+| `ServerCloakData` | Shared library: firewall policy manager, service installer, IP-to-country lookup, IP range helpers. |
+| `ServerCloak2` | Desktop UI (Material design) for installing the service, viewing attacker IP logs and country logs. |
+| `ConsoleTest` | Console harness for testing detection code. |
+
+## Requirements
+
+- Windows 7 / Windows Server 2008 or later (64-bit)
+- .NET Framework 4.8
+- Windows Firewall installed (ServerCloak tries to enable it automatically)
+- SQL Server 2005 or later, used to store logs and for reporting
+- Dual-core 1 GHz CPU and 1 GB RAM or better
+- Visual Studio 2019 or later to build from source
+
+## Build
+
+```sh
+msbuild ServerCloak2.sln /p:Configuration=Release /p:Platform="Any CPU"
+```
+
+Or open `ServerCloak2.sln` in Visual Studio and build.
+
+## Setup
+
+ServerCloak is not an installer. Place the build output in a folder of your choice (for example
+`C:\Program Files\ServerCloak`).
+
+1. Create the database on SQL Server using `Program Files/DatabaseScripts.sql`.
+2. Set the connection string in `ConnectionString.txt`.
+3. Run `ServerCloak2.exe` **as Administrator** and install/start the service.
+4. Make sure Windows Firewall is working, because blocking is done through firewall rules.
+
+Ready-made binaries and the database script from the previous release are in [`Program Files`](Program%20Files).
+
+## How it works
+
+1. Each cloak sniffs its protocol or reads the matching event log.
+2. Failed or denied calls are logged per source IP.
+3. When an IP exceeds the limit, the service adds an inbound deny rule to Windows Firewall.
+4. The UI lets you review blocked IPs and countries.
+
+## License
+
+Dual-licensed, see [LICENSE](LICENSE).
+
+- **MIT License:** free for personal, educational, and non-commercial use.
+- **Commercial License:** required for business or commercial use. Contact
+  [vikasrulez@gmail.com](mailto:vikasrulez@gmail.com).
+
+## Support
+
+- Freelance work: <http://www.vikasrana.com/Contact?ref=ServerCloak>
+- Buy me a coffee: <https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=G9XKETWEVAFHQ>

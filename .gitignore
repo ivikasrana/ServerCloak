@@ -229,3 +229,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# Source folder, not SQL Server output
+!ServerCloakService/Sql/
