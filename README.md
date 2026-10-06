@@ -1,4 +1,4 @@
-# ServerCloak
+﻿# ServerCloak
 
 A lightweight intrusion detection and defense system for Windows. ServerCloak watches network activity and
 event logs for failed or denied inbound calls (IPv4 and IPv6), and when an attacker reaches the limit it adds a
@@ -73,8 +73,3 @@ Dual-licensed, see [LICENSE](LICENSE).
 - **MIT License:** free for personal, educational, and non-commercial use.
 - **Commercial License:** required for business or commercial use. Contact
   [vikasrulez@gmail.com](mailto:vikasrulez@gmail.com).
-
-## Support
-
-- Freelance work: <http://www.vikasrana.com/Contact?ref=ServerCloak>
-- Buy me a coffee: <https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=G9XKETWEVAFHQ>
