@@ -52,12 +52,12 @@ Or open `ServerCloak2.sln` in Visual Studio and build.
 ServerCloak is not an installer. Place the build output in a folder of your choice (for example
 `C:\Program Files\ServerCloak`).
 
-1. Create the database on SQL Server using `Program Files/DatabaseScripts.sql`.
+1. Create the database on SQL Server using `ServerCloak.Old/DatabaseScripts.sql`.
 2. Set the connection string in `ConnectionString.txt`.
 3. Run `ServerCloak2.exe` **as Administrator** and install/start the service.
 4. Make sure Windows Firewall is working, because blocking is done through firewall rules.
 
-Ready-made binaries and the database script from the previous release are in [`Program Files`](Program%20Files).
+Ready-made binaries and the database script from the previous release are in [`ServerCloak.Old`](ServerCloak.Old).
 
 ## How it works
 
